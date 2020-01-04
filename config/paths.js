@@ -5,6 +5,6 @@ module.exports = {
   src: path.resolve(__dirname, '../src'),
   // production build files
   build: path.resolve(__dirname, '../dist'),
-  // static files to copy to build folder
-  static: path.resolve(__dirname, '../public'),
+  // public files to copy to build folder
+  public: path.resolve(__dirname, '../public'),
 }

@@ -1,7 +1,6 @@
 const paths = require('./config/paths')
 const webpackMerge = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (env, { mode = 'production' }) =>
@@ -38,27 +37,14 @@ module.exports = (env, { mode = 'production' }) =>
     new CleanWebpackPlugin(),
 
     /**
-     * CopyWebpackPlugin
-     *
-     * Copies files from target to destination folder.
-     */
-    new CopyWebpackPlugin([
-      {
-        from: paths.static,
-        to: 'assets',
-        ignore: ['*.DS_Store'],
-      },
-    ]),
-
-    /**
      * HtmlWebpackPlugin
      *
      * Generates an HTML file from a template.
      */
     new HtmlWebpackPlugin({
-      title: 'Webpack Boilerplate',
-      favicon: paths.src + '/images/favicon.png',
-      template: paths.src + '/template.html', // template file
+      title: 'Features of web components',
+      favicon: paths.public + '/favicon.png',
+      template: paths.public + '/template.html', // template file
       filename: 'index.html', // output file
     }),
   ],
