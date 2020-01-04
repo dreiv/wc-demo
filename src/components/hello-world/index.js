@@ -11,4 +11,4 @@ export default class HelloWorld extends HTMLElement {
 }
 
 // Register custom element
-customElements.define('wc-helloworld', HelloWorld);
+window.customElements.define('wc-helloworld', HelloWorld);

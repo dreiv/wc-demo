@@ -10,6 +10,11 @@ template.innerHTML = /*html*/ `
     <span>Hello World</span>
   </div>
 
+  <div class="box">
+      <button data-tag-name="wc-lifecycle">show</button>
+      <span>LifeCycle</span>
+    </div>
+
   <main>
     <!-- Attach component -->
   </main>
@@ -19,10 +24,6 @@ template.innerHTML = /*html*/ `
  * App class
  */
 class App extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   /**
    * Attach
    */
@@ -35,4 +36,4 @@ class App extends HTMLElement {
 }
 
 // Register custom element
-customElements.define('my-app', App);
+window.customElements.define('my-app', App);
