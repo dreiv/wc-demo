@@ -1,4 +1,5 @@
 import './components/say-something.js';
+import './styles/index.scss'
 
 const template = document.createElement('template');
 
