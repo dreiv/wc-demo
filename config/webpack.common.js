@@ -33,7 +33,7 @@ module.exports = mode => ({
      *
      * Removes/cleans build folders and unused assets when rebuilding.
      */
-		new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
 
     /**
      * HtmlWebpackPlugin
@@ -55,6 +55,12 @@ module.exports = mode => ({
    */
 	module: {
     rules: [
+
+      /**
+       * Styles
+       *
+       * Inject CSS into the head with source maps.
+       */
       {
         test: /\.s[ac]ss$/i,
         use: [
