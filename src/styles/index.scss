@@ -1,12 +1,36 @@
 @import 'variables';
 
 html {
-  max-width: $page-width;
-  margin: 0 auto;
-
   font-family: $font-family;
   text-align: center;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  max-width: $page-width;
+  margin: 0 auto;
+
+  color: dimgray;
+}
+
+main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+
+.box {
+  padding: 10px 20px;
+  border: 1px solid lightgray;
+}
+
+.box + .box {
+  margin-top: 10px;
+}
+
+button {
+  margin-right: 10px;
 }
