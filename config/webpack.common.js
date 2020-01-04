@@ -3,6 +3,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = mode => ({
+  /**
+   * Mode
+   *
+   * Set the mode to development or production.
+   */
   mode,
   /**
    * Entry
