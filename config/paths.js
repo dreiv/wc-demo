@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   // source files
@@ -6,5 +6,5 @@ module.exports = {
   // production build files
   build: path.resolve(__dirname, '../dist'),
   // public files
-  public: path.resolve(__dirname, '../public')
-}
+  public: path.resolve(__dirname, '../public'),
+};

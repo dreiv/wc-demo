@@ -1,33 +1,33 @@
-const paths = require('./paths')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const paths = require('./paths');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = mode => ({
   mode,
-	/**
- * Entry
- *
- * The first place Webpack looks to start building the bundle.
- */
-	entry: [paths.src + '/index.js'],
+  /**
+   * Entry
+   *
+   * The first place Webpack looks to start building the bundle.
+   */
+  entry: [paths.src + '/index.js'],
 
-	/**
- * Output
- *
- * Where Webpack outputs the assets and bundles.
- */
-	output: {
-		path: paths.build,
-		filename: '[name].bundle.js',
-		publicPath: '/',
-	},
+  /**
+   * Output
+   *
+   * Where Webpack outputs the assets and bundles.
+   */
+  output: {
+    path: paths.build,
+    filename: '[name].bundle.js',
+    publicPath: '/',
+  },
 
-	/**
- * Plugins
- *
- * Customize the Webpack build process.
- */
-	plugins: [
+  /**
+   * Plugins
+   *
+   * Customize the Webpack build process.
+   */
+  plugins: [
     /**
      * CleanWebpackPlugin
      *
@@ -40,21 +40,31 @@ module.exports = mode => ({
      *
      * Generates an HTML file from a template.
      */
-		new HtmlWebpackPlugin({
-			title: 'Features of web components',
-			favicon: paths.public + '/favicon.png',
-			template: paths.public + '/template.html', // template file
-			filename: 'index.html', // output file
-		}),
-	],
+    new HtmlWebpackPlugin({
+      title: 'Features of web components',
+      favicon: paths.public + '/favicon.png',
+      template: paths.public + '/template.html', // template file
+      filename: 'index.html', // output file
+    }),
+  ],
 
-	/**
+  /**
    * Module
    *
    * Determine how modules within the project are treated.
    */
-	module: {
+  module: {
     rules: [
+      /**
+       * JavaScript
+       *
+       * Use Babel to transpile JavaScript files.
+       */
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader'],
+      },
 
       /**
        * Styles

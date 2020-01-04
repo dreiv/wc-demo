@@ -1,5 +1,5 @@
 module.exports = () => ({
-	devServer: {
-		contentBase: './dist'
-	}
-})
+  devServer: {
+    contentBase: './dist',
+  },
+});

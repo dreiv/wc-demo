@@ -1,5 +1,5 @@
 import './components/say-something.js';
-import './styles/index.scss'
+import './styles/index.scss';
 
 const template = document.createElement('template');
 
@@ -32,7 +32,7 @@ class App extends HTMLElement {
 
   _handleChange() {
     this.$allSaySomething.forEach(element => {
-      element.setAttribute('text', this.$input.value)
+      element.setAttribute('text', this.$input.value);
     });
   }
 }
