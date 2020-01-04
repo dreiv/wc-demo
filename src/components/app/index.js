@@ -1,4 +1,4 @@
-import { linkDOM } from './domLink';
+import linkDOM from './linkDOM';
 
 const template = document.createElement('template');
 
@@ -15,11 +15,17 @@ template.innerHTML = /*html*/ `
   </main>
 `;
 
+/**
+ * App class
+ */
 class App extends HTMLElement {
   constructor() {
     super();
   }
 
+  /**
+   * Attach
+   */
   connectedCallback() {
     const temp = document.importNode(template.content, true);
     this.appendChild(temp);
@@ -28,4 +34,5 @@ class App extends HTMLElement {
   }
 }
 
+// Register custom element
 customElements.define('my-app', App);

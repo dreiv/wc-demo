@@ -34,4 +34,4 @@ const _handleItemClick = evt => {
   $main.appendChild(document.createElement(evt.currentTarget.dataset.tagName));
 };
 
-export { linkDOM };
+export default linkDOM;
