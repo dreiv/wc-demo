@@ -1,12 +1,12 @@
 @import 'variables';
 
 html {
+  max-width: $page-width;
+  margin: 0 auto;
+
   font-family: $font-family;
+  text-align: center;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  max-width: $page-width;
-  margin: 0 auto;
-  text-align: center;
 }
