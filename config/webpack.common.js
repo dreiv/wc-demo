@@ -77,7 +77,7 @@ module.exports = mode => ({
        * Inject CSS into the head with source maps.
        */
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.s[ac]ss$/,
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',
@@ -86,6 +86,18 @@ module.exports = mode => ({
           // Compiles Sass to CSS
           'sass-loader',
         ],
+      },
+
+      /**
+       * Export into HTML files
+       *
+       * exporting the HTML into their own .html file,
+       * to serve them directly instead of injecting with javascript.
+       */
+      {
+        test: /\.html$/,
+        exclude: /public/,
+        use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
       },
     ],
   },

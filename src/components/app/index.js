@@ -11,9 +11,14 @@ template.innerHTML = /*html*/ `
   </div>
 
   <div class="box">
-      <button data-tag-name="wc-lifecycle">show</button>
-      <span>LifeCycle</span>
-    </div>
+    <button data-tag-name="wc-lifecycle">show</button>
+    <span>LifeCycle</span>
+  </div>
+
+  <div class="box">
+    <button data-tag-name="wc-adapted-callback">show</button>
+    <span>Adapted Callback</span>
+  </div>
 
   <main>
     <!-- Attach component -->
