@@ -35,6 +35,11 @@ template.innerHTML = /*html*/ `
     <span>Enable or Disable of ShadowRoot</span>
   </div>
 
+  <div class="box">
+    <button data-tag-name="wc-open-close">show</button>
+    <span>Open or Close of ShadowRoot</span>
+  </div>
+
   <main>
     <!-- Attach component -->
   </main>
