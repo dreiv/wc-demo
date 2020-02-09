@@ -20,6 +20,11 @@ template.innerHTML = /*html*/ `
     <span>Adapted Callback</span>
   </div>
 
+  <div class="box">
+    <button data-tag-name="wc-extends">show</button>
+    <span>Extends</span>
+  </div>
+
   <main>
     <!-- Attach component -->
   </main>
