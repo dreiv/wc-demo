@@ -47,7 +47,9 @@ export default class Label extends HTMLElement {
    * @private
    */
   _render() {
-    this.innerHTML = `<h1>${this._label}</h1>`;
+    this.innerHTML = /*html*/ `
+      <h1>${this._label}</h1>
+    `;
   }
 
   set label(val) {

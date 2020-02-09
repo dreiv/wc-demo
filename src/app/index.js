@@ -30,6 +30,11 @@ template.innerHTML = /*html*/ `
     <span>Initialize 3 ways</span>
   </div>
 
+  <div class="box">
+    <button data-tag-name="wc-shadow-noshadow">show</button>
+    <span>Enable or Disable of ShadowRoot</span>
+  </div>
+
   <main>
     <!-- Attach component -->
   </main>
