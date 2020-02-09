@@ -1,7 +1,8 @@
-import './components/app';
-import './components/helloWorld';
-import './components/lifecycle';
-import './components/adaptedCallback';
-import './components/extends';
+import './app';
+import './demos/helloWorld';
+import './demos/lifecycle';
+import './demos/adaptedCallback';
+import './demos/extends';
+import './demos/3ways';
 
 import './styles/index.scss';

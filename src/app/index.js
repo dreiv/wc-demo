@@ -25,6 +25,11 @@ template.innerHTML = /*html*/ `
     <span>Extends</span>
   </div>
 
+  <div class="box">
+    <button data-tag-name="wc-3ways">show</button>
+    <span>Initialize 3 ways</span>
+  </div>
+
   <main>
     <!-- Attach component -->
   </main>
