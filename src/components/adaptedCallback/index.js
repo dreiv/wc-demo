@@ -11,11 +11,12 @@ export default class AdaptedCallback extends HTMLElement {
   connectedCallback() {
     this.innerHTML = /*html*/ `
       <style>
+        wc-adapted-callback,
         .container {
-          width: 500px;
-          margin: 0 auto;
+          width: 100%;
         }
         iframe {
+          box-sizing: border-box;
           width:100%;
           height: 200px;
         }
@@ -31,6 +32,7 @@ export default class AdaptedCallback extends HTMLElement {
         <iframe src="./inner.html">
       </div>
     `;
+
     this.clickListener = this.handleClick.bind(this);
     const buttonElm = this.querySelector('.button');
     buttonElm.addEventListener('click', this.clickListener);

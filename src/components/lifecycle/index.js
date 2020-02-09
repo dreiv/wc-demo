@@ -8,8 +8,9 @@ export default class Lifecycle extends HTMLElement {
    * Attach
    */
   connectedCallback() {
-    this.innerHTML =
-      '<wc-lifecycle-item label="LifeCycle"></wc-lifecycle-item>';
+    this.innerHTML = /*html*/ `
+      <wc-lifecycle-item label="LifeCycle"></wc-lifecycle-item>
+    `;
 
     // Register `LifecycleItem` from the component on this side
     // If you define it in `LifecycleItem`, `window.customElements.define` is called

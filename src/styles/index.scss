@@ -11,6 +11,8 @@ html {
 body {
   max-width: $page-width;
   margin: 0 auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 
   color: dimgray;
 }
@@ -19,18 +21,13 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 30px;
 }
 
 .box {
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   border: 1px solid lightgray;
 }
 
 .box + .box {
-  margin-top: 10px;
-}
-
-button {
-  margin-right: 10px;
+  margin-top: 0.5rem;
 }
