@@ -97,7 +97,14 @@ module.exports = mode => ({
       {
         test: /\.html$/,
         exclude: /public/,
-        use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
+        use: [
+          // Writes the html file
+          'file-loader?name=[name].[ext]',
+          // Parses the javascript back into a proper html file
+          'extract-loader',
+          // Parses the URLs
+          'html-loader',
+        ],
       },
     ],
   },

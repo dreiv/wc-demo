@@ -1,4 +1,5 @@
 import './item.js';
+import './inner.html';
 
 /**
  * AdaptedCallback testing class
