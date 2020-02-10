@@ -6,5 +6,7 @@ import './cases/extends';
 import './cases/3ways';
 import './cases/shadowDom';
 import './cases/openClose';
+import './cases/template';
+import './cases/slot';
 
 import './styles/index.scss';

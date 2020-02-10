@@ -19,6 +19,7 @@
   "editor.formatOnPaste": true,
   "cSpell.words": [
     "helloworld",
-    "noshadow"
+    "noshadow",
+    "signin"
   ]
 }

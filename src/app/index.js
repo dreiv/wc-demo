@@ -40,6 +40,16 @@ template.innerHTML = /*html*/ `
     <span>Open or Close of ShadowRoot</span>
   </div>
 
+  <div class="box">
+    <button data-tag-name="wc-template">show</button>
+    <span>Template</span>
+  </div>
+
+  <div class="box">
+    <button data-tag-name="wc-slot">show</button>
+    <span>Slot</span>
+  </div>
+
   <main>
     <!-- Attach component -->
   </main>
