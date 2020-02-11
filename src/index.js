@@ -8,5 +8,6 @@ import './cases/shadowDom';
 import './cases/openClose';
 import './cases/template';
 import './cases/slot';
+import './cases/adoptedStyleSheets';
 
 import './styles/index.scss';

@@ -50,6 +50,11 @@ template.innerHTML = /*html*/ `
     <span>Slot</span>
   </div>
 
+  <div class="box">
+    <button data-tag-name="wc-adopted-stylesheets">show</button>
+    <span>Adopted Stylesheets</span>
+  </div>
+
   <main>
     <!-- Attach component -->
   </main>
