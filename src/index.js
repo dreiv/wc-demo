@@ -9,5 +9,6 @@ import './cases/openClose';
 import './cases/template';
 import './cases/slot';
 import './cases/adoptedStyleSheets';
+import './cases/todoList';
 
 import './styles/index.scss';

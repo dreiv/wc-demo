@@ -55,6 +55,11 @@ template.innerHTML = /*html*/ `
     <span>Adopted Stylesheets</span>
   </div>
 
+  <div class="box">
+    <button data-tag-name="wc-todo-list">show</button>
+    <span>Todo List</span>
+  </div>
+
   <main>
     <!-- Attach component -->
   </main>

@@ -19,7 +19,9 @@
   "editor.formatOnPaste": true,
   "cSpell.words": [
     "helloworld",
+    "lightgray",
     "noshadow",
-    "signin"
+    "signin",
+    "whitesmoke"
   ]
 }
