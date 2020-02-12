@@ -7,6 +7,7 @@ export default class LifecycleItem extends HTMLElement {
    */
   static get observedAttributes() {
     alert('①: observedAttributes');
+
     return ['label'];
   }
 
@@ -39,7 +40,7 @@ export default class LifecycleItem extends HTMLElement {
    * Render
    */
   _render() {
-    this.innerHTML = '<h1 class="label"></h1>';
+    this.innerHTML = /*html*/ `<h1 class="label"></h1>`;
     this.querySelector('.label').textContent = this._label;
   }
 

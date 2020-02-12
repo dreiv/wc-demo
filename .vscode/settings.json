@@ -18,10 +18,12 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "cSpell.words": [
+    "antialiased",
     "helloworld",
     "lightgray",
     "noshadow",
     "signin",
+    "stylelint",
     "whitesmoke"
   ]
 }

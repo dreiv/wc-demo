@@ -1,8 +1,11 @@
 @import 'variables';
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: $font-family;
-  text-align: center;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

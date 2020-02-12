@@ -1,63 +1,63 @@
 import linkDOM from './linkDOM';
 
+// Create template tag
 const template = document.createElement('template');
-
 template.innerHTML = /*html*/ `
   <h1>Web Components with Webpack Starter Kit</h1>
 
   <div class="box">
     <button data-tag-name="wc-helloworld">show</button>
-    <span>Hello World</span>
+    <span>🌍 1. HelloWorld with simple CustomElements</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-lifecycle">show</button>
-    <span>LifeCycle</span>
+    <span>🚴 2. Try the life cycle (other than Adapted Callback)</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-adapted-callback">show</button>
-    <span>Adapted Callback</span>
+    <span>🎣 3. Adapted Callback</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-extends">show</button>
-    <span>Extends</span>
+    <span>🔧 4. Extends HtmlXXXElement</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-3ways">show</button>
-    <span>Initialize 3 ways</span>
+    <span>🛤️ 5. Three main ways to generate CustomElements</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-shadow-noshadow">show</button>
-    <span>Enable or Disable of ShadowRoot</span>
+    <span>🌓 6. CustomElements with shadow DOM and without</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-open-close">show</button>
-    <span>Open or Close of ShadowRoot</span>
+    <span>🚪 7. Open and Close mode of ShadowRoot</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-template">show</button>
-    <span>Template</span>
+    <span>🐾 8. Template</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-slot">show</button>
-    <span>Slot</span>
+    <span>🎰 9. Slot</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-adopted-stylesheets">show</button>
-    <span>Adopted Stylesheets</span>
+    <span>🌸 10. Adopted Stylesheets</span>
   </div>
 
   <div class="box">
     <button data-tag-name="wc-todo-list">show</button>
-    <span>Todo List</span>
+    <span>🍺 11. (Extra) Todo List Example</span>
   </div>
 
   <main>
@@ -73,8 +73,8 @@ class App extends HTMLElement {
    * Attach
    */
   connectedCallback() {
-    const temp = document.importNode(template.content, true);
-    this.appendChild(temp);
+    // Activate template with cloneNode
+    this.appendChild(template.content.cloneNode(true));
 
     linkDOM();
   }

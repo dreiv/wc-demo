@@ -3,6 +3,13 @@
  */
 export default class HelloWorld extends HTMLElement {
   /**
+   * Constructor
+   */
+  constructor() {
+    super();
+  }
+
+  /**
    * Attach
    */
   connectedCallback() {
