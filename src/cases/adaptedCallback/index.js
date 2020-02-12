@@ -17,14 +17,15 @@ export default class AdaptedCallback extends HTMLElement {
         }
         iframe {
           box-sizing: border-box;
-          width:100%;
-          height: 200px;
+          width: 100%;
+          height: 12rem;
         }
         .button {
           display: block;
           width: 100%;
         }
       </style>
+
       <wc-adapted-item></wc-adapted-item>
       <div class="container">
         <div>Outer html</div>

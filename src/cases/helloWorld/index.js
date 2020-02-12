@@ -13,9 +13,7 @@ export default class HelloWorld extends HTMLElement {
    * Attach
    */
   connectedCallback() {
-    this.innerHTML = /*html*/ `
-      <p>Hello World</p>
-    `;
+    this.innerHTML = /*html*/ `<p>Hello World!</p>`;
   }
 }
 

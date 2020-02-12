@@ -15,6 +15,7 @@ export default class Extends extends HTMLElement {
           text-align: center;
         }
       </style>
+
       <h1>Extend existing UI parts</h1>
       <!--
         Apply custom elements using the 'is' attribute
