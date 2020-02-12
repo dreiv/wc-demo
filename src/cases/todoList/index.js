@@ -10,26 +10,26 @@ template.innerHTML = /*html*/ `
     h1 {
       text-align: center;
       font-weight: bold;
-      font-size: 50px;
+      font-size: 3rem;
     }
     .container {
-      padding: 20px 0;
+      padding: 1rem 0;
     }
     form {
       display: flex;
       align-items: center;
       justify-content: center;
       border: 1px solid lightgray;
-      padding: 10px; 0;
+      padding: 0.5rem; 0;
       background-color: whitesmoke;
     }
     input {
       flex-grow: 1;
-      margin: 0 10px;
-      height: 20px;
+      margin: 0 0.5rem;
+      height: 1rem;
     }
     wc-todo-item + wc-todo-item {
-      margin-top: 20px;
+      margin-top: 1rem;
     }
   </style>
   <h1>Todo List</h1>
@@ -49,11 +49,14 @@ export default class TodoList extends HTMLElement {
    */
   constructor() {
     super();
+
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+
     this._containerElm = this.shadowRoot.querySelector('.container');
     this._submitElm = this.shadowRoot.querySelector('form');
     this._inputElm = this.shadowRoot.querySelector('input');
+
     this._clickSubmitListener = this._tryAddItem.bind(this);
   }
 
@@ -62,6 +65,7 @@ export default class TodoList extends HTMLElement {
    */
   connectedCallback() {
     this._submitElm.addEventListener('submit', this._clickSubmitListener);
+
     this._render();
   }
 
@@ -94,16 +98,17 @@ export default class TodoList extends HTMLElement {
   _findItemById(id) {
     const todoElms = this.shadowRoot.querySelectorAll('wc-todo-item');
     const target = [...todoElms].find(item => item.id === id);
+
     return target;
   }
 
   /**
    * Try add todoItem
    * @private
-   * @param {CustomEvent} e
+   * @param {CustomEvent} evt
    */
-  _tryAddItem(e) {
-    e.preventDefault();
+  _tryAddItem(evt) {
+    evt.preventDefault();
     const val = this._inputElm.value;
     if (!val) {
       return;
@@ -123,6 +128,7 @@ export default class TodoList extends HTMLElement {
     const todoElm = document.createElement('wc-todo-item');
     todoElm.label = label;
     todoElm.checked = checked;
+
     const onToggleListener = this._toggleItem.bind(this);
     const onRemoveListener = this._removeItem.bind(this);
     todoElm.addEventListener('onToggle', onToggleListener);
@@ -131,6 +137,7 @@ export default class TodoList extends HTMLElement {
       todoElm.removeEventListener('onToggle', onToggleListener);
       todoElm.removeEventListener('onRemove', onRemoveListener);
     };
+
     // Add Todo items to the top of the container
     this._containerElm.insertBefore(todoElm, this._containerElm.firstChild);
   }
@@ -145,12 +152,13 @@ export default class TodoList extends HTMLElement {
     if (!item) {
       return;
     }
+
     // Toggle check mark
     item.checked = !item.checked;
   }
 
   /**
-   * Remove todo item form todolist
+   * Remove todo item from todo list
    * @private
    * @param {CustomEvent} e
    */
@@ -159,6 +167,7 @@ export default class TodoList extends HTMLElement {
     if (!item) {
       return;
     }
+
     // Remove target todo item
     this._containerElm.removeChild(item);
   }

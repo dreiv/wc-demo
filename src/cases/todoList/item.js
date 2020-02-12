@@ -10,11 +10,11 @@ template.innerHTML = /*html*/ `
       align-items: center;
       justify-content: center;
       border: 1px solid lightgray;
-      padding: 10px; 0;
+      padding: 0.5rem;
     }
     .label {
       flex-grow: 1;
-      margin: 0 10px;
+      margin: 0 0.5rem;
     }
     :host .label {
       text-decoration: none;
@@ -59,6 +59,7 @@ export default class Todo extends HTMLElement {
       default:
         break;
     }
+
     this._render();
   }
 
@@ -67,14 +68,18 @@ export default class Todo extends HTMLElement {
    */
   constructor() {
     super();
+
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+
     this._id = this._createRandomId();
     this._label = '';
     this._checked = false;
+
     this._checkBoxElm = this.shadowRoot.querySelector('.checkbox');
     this._removeElm = this.shadowRoot.querySelector('.remove');
     this._labelElm = this.shadowRoot.querySelector('.label');
+
     this._toggleListener = this._dispatchToggle.bind(this);
     this._removeListener = this._dispatchRemove.bind(this);
   }
@@ -85,6 +90,7 @@ export default class Todo extends HTMLElement {
   connectedCallback() {
     this._checkBoxElm.addEventListener('click', this._toggleListener);
     this._removeElm.addEventListener('click', this._removeListener);
+
     this._render();
   }
 
@@ -103,9 +109,7 @@ export default class Todo extends HTMLElement {
   _render() {
     this._labelElm.textContent = this._label;
     this._checkBoxElm.checked = this._checked;
-    this._checked
-      ? this._labelElm.classList.add('label--selected')
-      : this._labelElm.classList.remove('label--selected');
+    this._labelElm.classList.toggle('label--selected', this._checked);
   }
 
   /**
@@ -169,7 +173,7 @@ export default class Todo extends HTMLElement {
   }
 
   /**
-   * チェックされているかどうか
+   * Whether it is checked
    * @returns {boolean}
    */
   get checked() {
