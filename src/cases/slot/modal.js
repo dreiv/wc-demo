@@ -7,7 +7,7 @@ template.innerHTML = /*html*/ `
     }
   </style>
   <dialog open>
-    <button class="close">✗</button>
+    <button class="close">&times;</button>
     <slot name="content"></slot>
   </dialog>
 `;
