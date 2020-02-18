@@ -78,7 +78,7 @@ module.exports = mode => ({
        */
       {
         test: /\.s[ac]ss$/,
-        exclude: /\.component\.scss$/,
+        exclude: /cases.*\.scss$/,
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',
@@ -89,10 +89,14 @@ module.exports = mode => ({
         ],
       },
 
-      // Transforming SCSS file into CSS string
+      /**
+       * Styles
+       *
+       * Transforming SCSS file into CSS string.
+       */
       {
         test: /\.scss$/,
-        include: /\.component\.scss$/,
+        include: /cases.*\.scss$/,
         use: [
           'raw-loader',
           {

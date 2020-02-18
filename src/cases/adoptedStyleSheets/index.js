@@ -1,5 +1,5 @@
 // Read SCSS file as a raw CSS text
-import styleText from './index.component.scss';
+import styleText from './index.scss';
 
 // Create template tag
 const template = document.createElement('template');
