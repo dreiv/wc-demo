@@ -46,8 +46,7 @@ module.exports = mode => ({
      * Generates an HTML file from a template.
      */
     new HtmlWebpackPlugin({
-      title: 'Features of web components',
-      favicon: paths.public + '/favicon.png',
+      favicon: paths.public + '/favicon.svg',
       template: paths.public + '/template.html', // template file
       filename: 'index.html', // output file
     }),

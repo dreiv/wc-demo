@@ -3,7 +3,7 @@ import linkDOM from './linkDOM';
 // Create template tag
 const template = document.createElement('template');
 template.innerHTML = /*html*/ `
-  <h1>Web Components with Webpack Starter Kit</h1>
+  <h1>Features of web components</h1>
 
   <div class="box">
     <button data-tag-name="wc-helloworld">show</button>
