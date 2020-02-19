@@ -19,6 +19,7 @@
   "editor.formatOnPaste": true,
   "cSpell.words": [
     "antialiased",
+    "contenthash",
     "devtool",
     "helloworld",
     "lightgray",
