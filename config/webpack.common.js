@@ -28,6 +28,23 @@ module.exports = mode => ({
   },
 
   /**
+   * Optimization
+   *
+   * Have Webpack do multiple bundles.
+   */
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        core: {
+          test: /[\\/]((?!cases).*)[\\/]/,
+          name: 'core',
+        },
+      },
+    },
+  },
+
+  /**
    * Plugins
    *
    * Customize the Webpack build process.
@@ -77,7 +94,7 @@ module.exports = mode => ({
        */
       {
         test: /\.s[ac]ss$/,
-        exclude: /cases.*\.scss$/,
+        exclude: /[\\/]cases[\\/].*\.scss$/,
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',
@@ -95,7 +112,7 @@ module.exports = mode => ({
        */
       {
         test: /\.scss$/,
-        include: /cases.*\.scss$/,
+        include: /[\\/]cases[\\/].*\.scss$/,
         use: [
           'raw-loader',
           {
