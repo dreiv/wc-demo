@@ -14,13 +14,13 @@ export default class ShadowNoShadow extends HTMLElement {
         .container {
           display: flex;
           flex-direction: column;
-          align-items: center;
           justify-content: center;
           padding: 50px 0;
         }
+        wc-shadow-noshadow,
         wc-noshadow,
         wc-shadow {
-          width: 600px;
+          flex: 1
         }
       </style>
       <h1>Enable or Disable of ShadowRoot</h1>

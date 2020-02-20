@@ -20,8 +20,7 @@ template.innerHTML = /*html*/ `
       align-items: center;
       justify-content: center;
       border: 1px solid lightgray;
-      padding: 0.5rem; 0;
-      background-color: whitesmoke;
+      padding: 0.5rem;
     }
     input {
       flex-grow: 1;
@@ -34,7 +33,7 @@ template.innerHTML = /*html*/ `
   </style>
   <h1>Todo List</h1>
   <form>
-    <input type="text"></input>
+    <input type="text" />
     <button type="submit">submit</button>
   </form>
   <div class="container"></div>

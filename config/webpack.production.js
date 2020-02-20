@@ -1,17 +1,6 @@
 const OfflinePlugin = require('offline-plugin');
 
 module.exports = () => ({
-  module: {
-    rules: [
-      {
-        test: /\.html$/,
-        loader: 'html-loader',
-        options: {
-          minimize: true,
-        },
-      },
-    ],
-  },
   plugins: [
     new OfflinePlugin({
       publicPath: '/wc-demo/',
