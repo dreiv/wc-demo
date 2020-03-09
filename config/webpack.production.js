@@ -1,12 +1,10 @@
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 module.exports = () => ({
   plugins: [
-    new WorkboxPlugin.GenerateSW({
-      // these options encourage the ServiceWorkers to get in there fast
-      // and not allow any straggling "old" SWs to hang around
-      clientsClaim: true,
-      skipWaiting: true,
+    new OfflinePlugin({
+      publicPath: '/wc-demo/',
+      autoUpdate: true,
     }),
   ],
   output: {
