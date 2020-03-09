@@ -7,6 +7,7 @@ class Close extends HTMLElement {
    */
   constructor() {
     super();
+
     const root = this.attachShadow({ mode: 'closed' });
     root.innerHTML = /*html*/ `
       <style>

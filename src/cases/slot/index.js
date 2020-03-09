@@ -31,10 +31,13 @@ export default class Slot extends HTMLElement {
    */
   constructor() {
     super();
+
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+
     this._signinBtnElm = this.shadowRoot.querySelector('.signin-button');
     this._signupBtnElm = this.shadowRoot.querySelector('.signup-button');
+
     this._onSigninClickListener = this.handleSigninClick.bind(this);
     this._onSignupClickListener = this.handleSignupClick.bind(this);
   }

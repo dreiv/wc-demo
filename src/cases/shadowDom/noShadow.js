@@ -9,12 +9,11 @@ class NOShadow extends HTMLElement {
     this.innerHTML = /*html*/ `
       <style>
         h1 {
-          font-size: 30px;
           color: #3F51B5;
         }
         .box-noshadow {
           border: 1px solid lightgray;
-          padding: 20px;
+          padding: 1rem;
         }
       </style>
       <div class="box-noshadow">

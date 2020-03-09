@@ -7,6 +7,7 @@ class Open extends HTMLElement {
    */
   constructor() {
     super();
+
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = /*html*/ `
       <style>

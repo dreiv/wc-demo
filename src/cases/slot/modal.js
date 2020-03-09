@@ -5,6 +5,11 @@ template.innerHTML = /*html*/ `
     :host {
       display: block;
     }
+    .close {
+      float: right;
+      font-size: 1rem;
+      font-weight: bold;
+    }
   </style>
   <dialog open>
     <button class="close">&times;</button>
@@ -21,8 +26,10 @@ export default class Modal extends HTMLElement {
    */
   constructor() {
     super();
+
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+
     this._closeElm = this.shadowRoot.querySelector('.close');
     this._onCloseListener = () => this.handleCloseClick();
   }

@@ -38,7 +38,7 @@ export default class OpenClose extends HTMLElement {
   }
 
   /**
-   * Ckick button
+   * Click button
    */
   handleClick() {
     const openElm = this.querySelector('wc-open');

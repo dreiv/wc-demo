@@ -7,6 +7,7 @@ export default class Shadow extends HTMLElement {
    */
   constructor() {
     super();
+
     // Constructor is recommended for forming shadowRoot
     this.attachShadow({ mode: 'open' });
   }
@@ -21,13 +22,12 @@ export default class Shadow extends HTMLElement {
           display: block;
         }
         h1 {
-          font-size: 30px;
           color: #d51b5a;
           text-align: center;
         }
         .box-shadow {
           border: 1px solid lightgray;
-          padding: 20px;
+          padding: 1rem;
         }
       </style>
       <div class="box-shadow">

@@ -130,8 +130,10 @@ export default class TodoList extends HTMLElement {
 
     const onToggleListener = this._toggleItem.bind(this);
     const onRemoveListener = this._removeItem.bind(this);
+
     todoElm.addEventListener('onToggle', onToggleListener);
     todoElm.addEventListener('onRemove', onRemoveListener);
+
     todoElm.clearListeners = () => {
       todoElm.removeEventListener('onToggle', onToggleListener);
       todoElm.removeEventListener('onRemove', onRemoveListener);

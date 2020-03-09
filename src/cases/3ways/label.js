@@ -30,6 +30,7 @@ export default class Label extends HTMLElement {
    */
   constructor(label) {
     super();
+
     this._label = label || '';
   }
 
@@ -37,11 +38,8 @@ export default class Label extends HTMLElement {
    * Attach
    */
   connectedCallback() {
-    // If initialized by the new operator, an error will occur if the attribute is not manipulated after the constructor
-    this.label = this._label;
-
     this.innerHTML = /*html*/ `
-      <h1>${this._label}</h1>
+      <h1>${this._label || ''}</h1>
     `;
   }
 

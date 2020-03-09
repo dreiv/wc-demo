@@ -33,6 +33,7 @@ export default class LifecycleItem extends HTMLElement {
    */
   constructor() {
     super();
+
     alert('②: constructor');
   }
 

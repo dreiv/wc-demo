@@ -14,6 +14,7 @@ export default class ConfirmAnchor extends HTMLAnchorElement {
         evt.preventDefault();
       }
     };
+
     this.addEventListener('click', this.clickListener);
   }
 

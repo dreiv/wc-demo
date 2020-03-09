@@ -26,6 +26,7 @@ export default class ShadowNoShadow extends HTMLElement {
       <h1>Enable or Disable of ShadowRoot</h1>
       <div class="container">
         <wc-noshadow></wc-noshadow>
+        <br>
         <wc-shadow><wc-shadow>
       </div>
     `;
