@@ -8,14 +8,6 @@ export default class WC3ways extends HTMLElement {
    * Attach
    */
   connectedCallback() {
-    this._render();
-  }
-
-  /**
-   * Render
-   * @private
-   */
-  _render() {
     this.innerHTML = /*html*/ `
       <h1>Three ways to generate CustomElements</h1>
       <!-- ① Declarative tag writing pattern -->

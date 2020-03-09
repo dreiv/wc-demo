@@ -19,7 +19,6 @@ export default class Label extends HTMLElement {
     switch (name) {
       case 'label':
         this._label = newValue;
-        this._render();
         break;
       default:
         break;
@@ -40,13 +39,7 @@ export default class Label extends HTMLElement {
   connectedCallback() {
     // If initialized by the new operator, an error will occur if the attribute is not manipulated after the constructor
     this.label = this._label;
-  }
 
-  /**
-   * Render
-   * @private
-   */
-  _render() {
     this.innerHTML = /*html*/ `
       <h1>${this._label}</h1>
     `;
