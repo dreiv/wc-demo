@@ -13,9 +13,9 @@ template.innerHTML = /*html*/ `
 `;
 
 /**
- * Slot implementation class
+ * Modal implementation class
  */
-export default class XSlot extends HTMLElement {
+export default class Modal extends HTMLElement {
   /**
    * Constructor
    */
@@ -51,4 +51,4 @@ export default class XSlot extends HTMLElement {
 }
 
 // Register custom element
-window.customElements.define('wc-modal', XSlot);
+window.customElements.define('wc-modal', Modal);

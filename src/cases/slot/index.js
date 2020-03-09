@@ -25,7 +25,7 @@ template.innerHTML = /*html*/ `
 /**
  * Slot testing class
  */
-export default class XSlot extends HTMLElement {
+export default class Slot extends HTMLElement {
   /**
    * Constructor
    */
@@ -91,4 +91,4 @@ export default class XSlot extends HTMLElement {
 }
 
 // Register custom element
-window.customElements.define('wc-slot', XSlot);
+window.customElements.define('wc-slot', Slot);
