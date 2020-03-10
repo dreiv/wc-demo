@@ -26,6 +26,7 @@
     "noshadow",
     "signin",
     "stylelint",
+    "webcomponents",
     "whitesmoke"
   ]
 }

@@ -7,6 +7,7 @@ module.exports = () => ({
       autoUpdate: true,
     }),
   ],
+
   output: {
     publicPath: '/wc-demo/',
     filename: '[name].[contenthash:4].js',

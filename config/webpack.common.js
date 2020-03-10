@@ -28,23 +28,6 @@ module.exports = mode => ({
   },
 
   /**
-   * Optimization
-   *
-   * Have Webpack do multiple bundles.
-   */
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      cacheGroups: {
-        core: {
-          test: /[\\/]((?!cases).*)[\\/]/,
-          name: 'core',
-        },
-      },
-    },
-  },
-
-  /**
    * Plugins
    *
    * Customize the Webpack build process.
