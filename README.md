@@ -9,3 +9,5 @@ Useful links:
 - https://github.com/davatron5000/awesome-standalones
 
 - https://github.com/vanillawc/vanillawc
+
+- https://www.youtube.com/watch?v=PCWaFLy3VUo
